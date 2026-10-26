@@ -1,13 +1,13 @@
 # programmingteam6
-1. tic-tac-toe thingy
+1. flight simulator 2d
 2. students or people who have nothing to do will probably use this.
-3. the user would click on a square the program would determine which square was pressed, then the program will put either a x or an o in that box
-4. one part of the logic that is clear is how to make the x or o show up
-5. one part of the logic that is unclear is how to make the program detect if the player made a row or not.
-6. need to research on how to make the program detect if there is a 3 in a row or not and make a cpu if we want it.
+3. the user use the up arrow key, down arrow key, w key and s key. the program will then detarmin which keys where pressed and move the plane accordingly.
+4. one part of the logic that is clear is how to make plane and make the plane move
+5. one part of the logic that is unclear is how to make the program actually move the plane at the right speed and how to show it and the gravity and ground.
+6. need to research on how to make the program do the gravity and how to make the background bigger even though the actually display may be smaller.
 
 
 
 
 
-![tic-tac-toe](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwbQIFXrPdC91MjBBWGVohXjRD6uWmiO7C4hwQqKsKxoCyV5AVaf_p-LXV&s=10)
+![flight simulator](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnp0xxeg8WMvXVV1XhbgDNv0DdkYvW7oVsfQ-Ct1CGwA&s=10)
