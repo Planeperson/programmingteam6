@@ -5,3 +5,4 @@ the user would click on a square to claim it as theres and a cpu would claim the
 the user might see a start screen and once they click start the game starts
 yes there are similar apps or games
 the smallest version is just the bare bones of tic-tac-toe. A lot of bugs could happen and the cpu could be too good or too bad at the game. this could be tested with alpha testing and beta testing.
+![tic-tac-toe](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwbQIFXrPdC91MjBBWGVohXjRD6uWmiO7C4hwQqKsKxoCyV5AVaf_p-LXV&s=10)
