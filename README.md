@@ -7,6 +7,32 @@
 6. need to research on how to make the program do the gravity and how to make the background bigger even though the actually display may be smaller.
 
 
+   # Flappy plane
+
+This project is for people who just want to kill time. This project will help people
+
+## Team
+- jaxon.peterson - coding and making the birds
+- Enda - coding and making the plane.
+
+## First buildable version
+- [ ] A user can arrow keys.
+- [ ] The program responds by moving the plane.
+- [ ] We have limited the first version to plane with blue background and just birds.
+
+## Design pack
+- [ ] User-interface mockup: [view the mockup](design/ui-mockup.png)
+- [ ] Class diagram: [view the class diagram](design/class-diagram.png)
+- [ ] Logic diagram: [view the logic diagram](design/logic-diagram.png)
+- [ ] Project schedule: [view the schedule](design/project-schedule.png)
+
+## Current status
+[What is complete? What is the team's next step?]
+
+## How to view the artifacts
+[Explain any file type or tool a viewer needs.]
+
+
 
 
 
