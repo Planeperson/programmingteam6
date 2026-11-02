@@ -24,7 +24,7 @@ This project is for people who just want to kill time.
 ## Design pack
 - [ ] User-interface mockup: [view the mockup](design/ui-mockup.png)
 - [ ] Class diagram: [view the class diagram](https://github.com/Planeperson/programmingteam6/blob/main/docs/flappyplaneclass.jpg)
-- [ ] Logic diagram: [view the logic diagram](design/logic-diagram.png)
+- [ ] Logic diagram: [view the logic diagram](https://github.com/Planeperson/programmingteam6/blob/main/docs/Untitled%20Diagram.jpg)
 - [ ] Project schedule: [view the schedule](design/project-schedule.png)
 
 ## Current status
