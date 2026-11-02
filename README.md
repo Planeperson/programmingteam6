@@ -23,7 +23,7 @@ This project is for people who just want to kill time.
 
 ## Design pack
 - [ ] User-interface mockup: [view the mockup](design/ui-mockup.png)
-- [ ] Class diagram: [view the class diagram](<img width="602" height="314" alt="flappyplaneclass" src="https://github.com/user-attachments/assets/fe9ad117-4e32-4709-af00-c1debfbe48fc" />)
+- [ ] Class diagram: [view the class diagram](design/class-diagram.png)
 - [ ] Logic diagram: [view the logic diagram](design/logic-diagram.png)
 - [ ] Project schedule: [view the schedule](design/project-schedule.png)
 
