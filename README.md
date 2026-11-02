@@ -1,5 +1,5 @@
 # programmingteam6
-1. flight simulator 2d
+1. flappy plane
 2. students or people who have nothing to do will probably use this.
 3. the user use the up arrow key, down arrow key, left arrow key and right arrow key. the program will then determine which keys where pressed and move the plane accordingly.
 4. one part of the logic that is clear is how to make plane and make the plane move
@@ -9,11 +9,12 @@
 
    # Flappy plane
 
-This project is for people who just want to kill time. This project will help people
+This project is for people who just want to kill time.
 
 ## Team
 - jaxon.peterson - coding and making the birds
 - Enda - coding and making the plane.
+- Osha - coding and maing the airtraffic
 
 ## First buildable version
 - [ ] A user can arrow keys.
@@ -22,15 +23,15 @@ This project is for people who just want to kill time. This project will help pe
 
 ## Design pack
 - [ ] User-interface mockup: [view the mockup](design/ui-mockup.png)
-- [ ] Class diagram: [view the class diagram](design/class-diagram.png)
+- [ ] Class diagram: [view the class diagram](<img width="602" height="314" alt="flappyplaneclass" src="https://github.com/user-attachments/assets/fe9ad117-4e32-4709-af00-c1debfbe48fc" />)
 - [ ] Logic diagram: [view the logic diagram](design/logic-diagram.png)
 - [ ] Project schedule: [view the schedule](design/project-schedule.png)
 
 ## Current status
-[What is complete? What is the team's next step?]
+in design phase
 
 ## How to view the artifacts
-[Explain any file type or tool a viewer needs.]
+processing 4.0.1
 
 
 
