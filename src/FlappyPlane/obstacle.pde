@@ -13,7 +13,7 @@ y = 50;
 w = 50;
 h = 50;
 c1 = color(244);
-bird = loadImage("bird for flight sim.png");
+bird = loadImage("birdplane.jpeg");
 }
 // member methods
 void display() {
