@@ -17,7 +17,7 @@ class Player {
   }
   // Member Methods
   void display () {
-    // todo: add image
+    // todo: add image and remove rect
     // image(p1,x,y);
     fill(c1);
     rect(x,y,w,h);
