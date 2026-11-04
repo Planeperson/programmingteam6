@@ -12,17 +12,13 @@ class MMenuButtons {
   color c2;
 
   // Constructor
-  PlayB() {
+  MMenuButtons() {
    x = 100;
    y = 100;
    w = 150;
    h = 75;
    c1 = color(15);
   }
-
-  ControlsB() {}
-
-  QuitB() {}
 
   // Member Methods
   void display() {
