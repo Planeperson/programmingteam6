@@ -1,6 +1,6 @@
 // Osha Furness
 
-class MMenuButtons {
+class MMenuButton {
   // Member Variable
   boolean selectedPlay;
   boolean selectedControls;
@@ -12,7 +12,7 @@ class MMenuButtons {
   color c2;
 
   // Constructor
-  MMenuButtons() {
+  MMenuButton() {
    x = 100;
    y = 100;
    w = 150;
