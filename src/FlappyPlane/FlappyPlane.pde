@@ -1,9 +1,9 @@
 // Osha Furness
-MMenuButtons Pb;
+MMenuButton Pb;
 
 void setup() {
  size(1000, 1000);
- Pb = new MMenuButtons();
+ Pb = new MMenuButton();
 
 }
 
