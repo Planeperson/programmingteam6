@@ -2,9 +2,7 @@
 
 class MMenuButton {
   // Member Variable
-  boolean selectedPlay;
-  boolean selectedControls;
-  boolean seelctedQuit;
+  boolean selected;
 
   int x, y, w, h;
 
@@ -12,17 +10,23 @@ class MMenuButton {
   color c2;
 
   // Constructor
-  MMenuButton() {
-    x = width/2;
-    y = height/2;
+  MMenuButton(int x, int y) {
+    this.x = x;
+    this.y = y;
     w = 150;
     h = 75;
-    c1 = color(15);
+    c1 = color(175);
+    c2 = color(50);
+    selected = false;
   }
 
   // Member Methods
   void display() {
-    fill(c1);
+    if (selected = true) {
+      fill(c1);
+    } else {
+      fill(c2);
+    }
     rectMode(CENTER);
     rect(x, y, w, h);
   }
