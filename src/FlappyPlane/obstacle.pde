@@ -3,23 +3,23 @@
 class obstacles {
 // member variables
 int x,y,w,h;
-color cl;
+color c1;
 PImage bird;
 
 // constructer
-Obstacles() {
+obstacles() {
 x = 50;
 y = 50;
 w = 50;
 h = 50;
-cl = color(244,55,77);
-bird = loadImage("");
+c1 = color(244);
+bird = loadImage("bird for flight sim.png");
 }
 // member methods
 void display() {
 //todo: add image
 //image(bird,x,y)
-fill(c);
+fill(c1);
 rect(x,y,w,h);
 }
 }
