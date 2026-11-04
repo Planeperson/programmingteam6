@@ -17,6 +17,9 @@ bird = loadImage("");
 }
 // member methods
 void display() {
-
+//todo: add image
+//image(bird,x,y)
+fill(c);
+rect(x,y,w,h);
 }
 }
