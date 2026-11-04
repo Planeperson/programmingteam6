@@ -8,8 +8,8 @@ void setup() {
 }
 
 void draw() {
- background(15);
- p1.Player.display;
+ background(#FFFFFF);
+ p1.display();
 }
 
 void keyPressed() {}
