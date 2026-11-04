@@ -16,6 +16,11 @@ class Player {
   p1 = loadImage("");
   }
   // Member Methods
-  void display () {}
+  void display () {
+    // todo: add image
+    // image(p1,x,y);
+    fill(c1);
+    rect(x,y,w,h);
+  }
   void move (char dir) {}
 }
