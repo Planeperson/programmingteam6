@@ -4,7 +4,7 @@ class Player {
   // member variaable
   int x,y,w,h
   color c1;
-  PImage plane;
+  PImage p1;
 
   // Constructor
   Player() {
