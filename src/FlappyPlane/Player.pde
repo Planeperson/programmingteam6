@@ -13,14 +13,12 @@ class Player {
   w = 50;
   h = 50;
   c1 = color(111);
-  p1 = loadImage("");
+  p1 = loadImage("biplane.png");
   }
   // Member Methods
   void display () {
     // todo: add image and remove rect
-    // image(p1,x,y);
-    fill(c1);
-    rect(x,y,w,h);
+    image(p1,x,y);
   }
   void move (char dir) {}
 }
