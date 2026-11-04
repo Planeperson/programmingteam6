@@ -1,15 +1,15 @@
 // Osha Furness
-Player p1;
+MMenuButtons Pb;
 
 void setup() {
  size(1000, 1000);
- p1 = new Player();
+ Pb = new MMenuButtons();
 
 }
 
 void draw() {
  background(#FFFFFF);
- p1.display();
+ Pb.display();
 }
 
 void keyPressed() {}
