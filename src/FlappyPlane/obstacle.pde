@@ -12,7 +12,7 @@ x = 50;
 y = 50;
 w = 50;
 h = 50;
-c1 = color(244.55.77);
+cl = color(244.55.77);
 bird = loadImage("");
 }
 // member methods
