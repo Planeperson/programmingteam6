@@ -13,7 +13,11 @@ class MMenuButtons {
 
   // Constructor
   PlayB() {
-   rect();
+   x = 100;
+   y = 100;
+   w = 150;
+   h = 75;
+   c1 = color(15);
   }
 
   ControlsB() {}
@@ -21,7 +25,10 @@ class MMenuButtons {
   QuitB() {}
 
   // Member Methods
-  void display() {}
+  void display() {
+   rect(x,y,w,h,c1);
+
+  }
 
   void move() {}
 }
