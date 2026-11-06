@@ -13,7 +13,7 @@ class MMenuButton {
   MMenuButton(int x, int y) {
     this.x = x;
     this.y = y;
-    w = 150;
+    w = 300;
     h = 75;
     c1 = color(175);
     c2 = color(50);
@@ -21,11 +21,12 @@ class MMenuButton {
   }
 
   // Member Methods
+  
   void display() {
-    if (selected = true) {
-      fill(c1);
-    } else {
-      fill(c2);
+    if (selected) {
+    fill(c2);
+  } else {
+    fill(c1);
     }
     rectMode(CENTER);
     rect(x, y, w, h);
