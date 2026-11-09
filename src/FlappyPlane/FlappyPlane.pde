@@ -3,10 +3,12 @@ MMenuButton Plb;
 MMenuButton Cob;
 MMenuButton Crb;
 MMenuButton Qub;
+Player P1;
 
-// Array of buttons
 MMenuButton[] buttons;
 int selectedIndex = 0;
+
+int gameState = 0;
 
 void setup() {
   size(1500, 750);
@@ -14,33 +16,57 @@ void setup() {
   Cob = new MMenuButton(width/2, height/2 + 100);
   Crb = new MMenuButton(width/2, height/2 + 200);
   Qub = new MMenuButton(width/2, height/2 + 300);
-  
+  P1 = new Player();
+
   buttons = new MMenuButton[] {
-    Plb, 
-    Cob, 
-    Crb, 
+    Plb,
+    Cob,
+    Crb,
     Qub,
   };
-  
+
   updateMSelect();
 }
 
 void draw() {
-  background(#6495ED);
+  background(#D3F8FF);
+
+  // Render based on the active state
+  if (gameState == 0) {
+    drawMMenu();
+  } else if (gameState == 1) {
+    drawPlay();
+  }
+}
+
+void drawMMenu() {
+  background(#D3F8FF);
   Plb.display();
   Cob.display();
   Crb.display();
   Qub.display();
 }
 
+void drawPlay() {
+  background(#3A61D3);
+  P1.display();
+}
+
 void keyPressed() {
-if (key == CODED) {
-    if (keyCode == DOWN) {
-      selectedIndex = (selectedIndex + 1) % buttons.length;
-      updateMSelect();
-    } else if (keyCode == UP) {
-      selectedIndex = (selectedIndex - 1 + buttons.length) % buttons.length;
-      updateMSelect();
+  if (gameState == 0) {
+    if (key == CODED) {
+      if (keyCode == DOWN) {
+        selectedIndex = (selectedIndex + 1) % buttons.length;
+        updateMSelect();
+      } else if (keyCode == UP) {
+        selectedIndex = (selectedIndex - 1 + buttons.length) % buttons.length;
+        updateMSelect();
+      }
+    }
+    if (keyCode == ENTER || key == ' ') {
+      if (selectedIndex == 0) {
+        gameState = 1;
+      }
     }
   }
 }
