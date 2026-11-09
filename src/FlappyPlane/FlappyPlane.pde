@@ -1,11 +1,8 @@
 // Osha Furness
 MMenuButton Plb;
-MMenuButton Cob;
 MMenuButton Crb;
 MMenuButton Qub;
 Player P1;
-PImage sharedImg;
-Obstacles obs;
 
 MMenuButton[] buttons;
 int selectedIndex = 0;
@@ -13,18 +10,14 @@ int selectedIndex = 0;
 int gameState = 0;
 
 void setup() {
-  size(1500, 800);
+  size(1500, 750);
   Plb = new MMenuButton(width/2, height/2);
-  Cob = new MMenuButton(width/2, height/2 + 100);
-  Crb = new MMenuButton(width/2, height/2 + 200);
-  Qub = new MMenuButton(width/2, height/2 + 300);
+  Crb = new MMenuButton(width/2, height/2 + 100);
+  Qub = new MMenuButton(width/2, height/2 + 200);
   P1 = new Player();
-sharedImg = loadImage("../../images/birb2.png"); 
-  obs = new Obstacles(sharedImg);
 
   buttons = new MMenuButton[] {
     Plb,
-    Cob,
     Crb,
     Qub,
   };
@@ -33,31 +26,45 @@ sharedImg = loadImage("../../images/birb2.png");
 }
 
 void draw() {
+  background(#D3F8FF);
+
+  // Render based on the active state
   if (gameState == 0) {
     drawMMenu();
-  } else if (gameState == 1) {
+  } else if (gameState == 2) {
     drawPlay();
+  } else if (gameState == 3) {
+    drawCredits();
   }
 }
 
 void drawMMenu() {
   background(#D3F8FF);
   Plb.display();
-  Cob.display();
   Crb.display();
   Qub.display();
-  
- 
 }
 
 void drawPlay() {
-  background(#3A61D3); 
-  
-  P1.display();        
-  obs.display();      
+  background(#3A61D3);
+  P1.display();
+}
+
+void drawCredits () {
+  background(#3AD399);
+  fill(0);
+  textAlign(CENTER);
+  textSize(200);
+  text("Credits", width/2, height/4);
 }
 
 void keyPressed() {
+  if (key == ESC) {
+    key = 0;
+    gameState = 0;
+    return;
+  }
+  
   if (gameState == 0) {
     if (key == CODED) {
       if (keyCode == DOWN) {
@@ -70,7 +77,9 @@ void keyPressed() {
     }
     if (keyCode == ENTER || key == ' ') {
       if (selectedIndex == 0) {
-        gameState = 1;
+        gameState = 2;
+      } else if (selectedIndex == 1) {
+        gameState = 3;
       }
     }
   }
