@@ -41,7 +41,6 @@ void draw() {
 void drawMMenu() {
   background(#D3F8FF);
   Plb.display();
-  Cob.display();
   Crb.display();
   Qub.display();
 }
