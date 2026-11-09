@@ -1,7 +1,6 @@
 // Osha Furness
 
 MMenuButton Plb;
-MMenuButton Cob;
 MMenuButton Crb;
 MMenuButton Qub;
 Player P1;
@@ -14,14 +13,12 @@ int gameState = 0;
 void setup() {
   size(1500, 750);
   Plb = new MMenuButton(width/2, height/2);
-  Cob = new MMenuButton(width/2, height/2 + 100);
-  Crb = new MMenuButton(width/2, height/2 + 200);
-  Qub = new MMenuButton(width/2, height/2 + 300);
+  Crb = new MMenuButton(width/2, height/2 + 100);
+  Qub = new MMenuButton(width/2, height/2 + 200);
   P1 = new Player();
 
   buttons = new MMenuButton[] {
     Plb,
-    Cob,
     Crb,
     Qub,
   };
