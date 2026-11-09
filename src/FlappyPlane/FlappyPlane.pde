@@ -26,7 +26,7 @@ void setup() {
 }
 
 void draw() {
-  background(#D3F8FF);
+  background(#6495ED);
   Plb.display();
   Cob.display();
   Crb.display();
