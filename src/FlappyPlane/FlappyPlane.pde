@@ -33,9 +33,6 @@ sharedImg = loadImage("../../images/birb2.png");
 }
 
 void draw() {
-  // 1. Remove the double background clear and the floating obs.display() from here
-  
-  // Render based on the active state
   if (gameState == 0) {
     drawMMenu();
   } else if (gameState == 1) {
@@ -44,21 +41,20 @@ void draw() {
 }
 
 void drawMMenu() {
-  background(#D3F8FF); // Clears screen with soft blue for the menu
+  background(#D3F8FF);
   Plb.display();
   Cob.display();
   Crb.display();
   Qub.display();
   
-  // Note: If you want the bird visible on the main menu instead, 
-  // you would put "obs.display();" right here at the bottom of this function!
+ 
 }
 
 void drawPlay() {
-  background(#3A61D3); // Draws the gameplay background FIRST
+  background(#3A61D3); 
   
-  P1.display();        // Draws the player
-  obs.display();       // FIX: Draws the obstacle bird ON TOP of the gameplay background!
+  P1.display();        
+  obs.display();      
 }
 
 void keyPressed() {
