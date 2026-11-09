@@ -3,17 +3,15 @@ class Obstacles {
   int x, y, w, h;
   color c1;
   PImage birdImg;
- 
 
-  // Make sure "PImage img" is exactly here
   Obstacles(PImage img) {
-    x = 750;
-    y = 200; 
-    w = 100; 
-    h = 100;
+    w = 200; 
+    h = 200;
+    x = 500;  
+    y = 200;  
+    
     c1 = color(244);
     birdImg = img; 
-    sharedImg = loadImage("../../images/birb2.png"); 
   }
 
   void display() {
