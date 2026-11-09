@@ -28,14 +28,15 @@ void setup() {
 
 void draw() {
   background(#D3F8FF);
-  
+
   // Render based on the active state
   if (gameState == 0) {
     drawMMenu();
-  } else if (gameState == 1) {
+  } else if (gameState == 2) {
     drawPlay();
+  } else if (gameState == 3) {
+    drawCredits();
   }
-  P1.update();
 }
 
 void drawMMenu() {
@@ -50,7 +51,21 @@ void drawPlay() {
   P1.display();
 }
 
+void drawCredits () {
+  background(#3AD399);
+  fill(0);
+  textAlign(CENTER);
+  textSize(200);
+  text("Credits", width/2, height/4);
+}
+
 void keyPressed() {
+  if (key == ESC) {
+    key = 0;
+    gameState = 0;
+    return;
+  }
+  
   if (gameState == 0) {
     if (key == CODED) {
       if (keyCode == DOWN) {
@@ -63,26 +78,16 @@ void keyPressed() {
     }
     if (keyCode == ENTER || key == ' ') {
       if (selectedIndex == 0) {
-        gameState = 1;
+        gameState = 2;
+      } else if (selectedIndex == 1) {
+        gameState = 3;
       }
     }
   }
-  setPlayerKey(true);
 }
 
 void updateMSelect() {
   for (int i = 0; i < buttons.length; i++) {
     buttons[i].selected = (i == selectedIndex);
-  }
-}
-void keyReleased() {
-  setPlayerKey(false);
-}
-
-void setPlayerKey(boolean pressed) {
-  if (key == CODED) {
-    P1.setMove(keyCode, pressed);
-  } else {
-    P1.setMove(key, pressed);
   }
 }
