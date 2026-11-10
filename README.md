@@ -22,7 +22,7 @@ This project is for people who just want to kill time.
 - [ ] We have limited the first version to plane with blue background and just birds.
 
 ## Design pack
-- [ ] User-interface mockup: [view the mockup]([design/ui-mockup.png](https://github.com/Planeperson/programmingteam6/tree/main/docs/GUI%20Mockup))
+- [ ] User-interface mockup: [view the mockup](https://github.com/Planeperson/programmingteam6/blob/main/docs/GUI%20Mockup/GUI%20Mockup.md)
 - [ ] Class diagram: [view the class diagram](https://github.com/Planeperson/programmingteam6/blob/main/docs/flappyplaneclass.jpg)
 - [ ] Logic diagram: [view the logic diagram](https://github.com/Planeperson/programmingteam6/blob/main/docs/MENU.jpeg)
 - [ ] Project schedule: [view the schedule](https://github.com/Planeperson/programmingteam6/blob/main/docs/schedule.jpg)
