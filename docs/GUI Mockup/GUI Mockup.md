@@ -1,1 +1,8 @@
-
+![MockupGuide](https://github.com/Planeperson/programmingteam6/blob/main/docs/GUI%20Mockup/MockupGuide.png?raw=true)
+![Mockup1]()
+![Mockup2]()
+![Mockup3]()
+![Mockup4]()
+![Mockup5]()
+![Mockup6]()
+![Mockup7]()
