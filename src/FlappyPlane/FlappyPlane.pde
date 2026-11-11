@@ -39,6 +39,7 @@ void draw() {
   } else if (gameState == 3) {
     drawCredits();
   }
+  P1.update();
 }
 
 void drawMMenu() {
@@ -96,5 +97,16 @@ void keyPressed() {
 void updateMSelect() {
   for (int i = 0; i < buttons.length; i++) {
     buttons[i].selected = (i == selectedIndex);
+  }
+}
+void keyReleased() {
+  setPlayerKey(false);
+}
+
+void setPlayerKey(boolean pressed) {
+  if (key == CODED) {
+    P1.setMove(keyCode, pressed);
+  } else {
+    P1.setMove(key, pressed);
   }
 }
