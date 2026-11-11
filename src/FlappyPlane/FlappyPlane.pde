@@ -89,9 +89,11 @@ void keyPressed() {
         gameState = 3;
       } else if (selectedIndex == 2) {
         exit();
-      }
+      } 
     }
+    
   }
+  setPlayerKey(true);
 }
 
 void updateMSelect() {
