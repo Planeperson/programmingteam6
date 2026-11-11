@@ -48,7 +48,7 @@ void draw() {
   } else if (gameState == 3) {
     drawCredits();
   }
-  P1.update
+  P1.update;
 }
 
 void drawMMenu() {
