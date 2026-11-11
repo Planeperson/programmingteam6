@@ -5,7 +5,7 @@ class Player {
   color c1;
   PImage p1;
 
-  // Key tracking flags
+ 
   boolean isUp, isDown, isLeft, isRight;
 
   // Constructor
@@ -23,7 +23,7 @@ class Player {
     image(p1, x, y);
   }
 
-  // Call this every frame in draw() for smooth movement
+
   void update() {
     int speed = 5;
     if (isUp)    y -= speed;
@@ -32,7 +32,7 @@ class Player {
     if (isRight) x += speed;
   }
 
-  // Handle key state changes
+ 
   void setMove(int k, boolean b) {
     if (k == UP || k == 'w' || k == 'W')    isUp = b;
     if (k == DOWN || k == 's' || k == 'S')  isDown = b;
