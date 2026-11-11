@@ -4,10 +4,6 @@ MMenuButton Plb;
 MMenuButton Crb;
 MMenuButton Qub;
 Player P1;
-Obstacles obs1; // Declare the obstacle object
-
-// Global variable to hold your bird image
-PImage birdImg; 
 
 MMenuButton[] buttons;
 int selectedIndex = 0;
@@ -16,17 +12,13 @@ int gameState = 0;
 
 void setup() {
   size(1500, 750);
-  
-  // 1. Load the image file from the data folder
-  birdImg = loadImage("birb2.png"); 
-  
+
+
   Plb = new MMenuButton(width/2, height/2);
   Crb = new MMenuButton(width/2, height/2 + 100);
   Qub = new MMenuButton(width/2, height/2 + 200);
   P1 = new Player();
-  
-  // 2. Initialize the obstacle and pass the loaded bird image to it
-  obs1 = new Obstacles(birdImg); 
+
 
   buttons = new MMenuButton[] {
     Plb,
@@ -40,7 +32,6 @@ void setup() {
 void draw() {
   background(#D3F8FF);
 
-  // Render based on the active state
   if (gameState == 0) {
     drawMMenu();
   } else if (gameState == 2) {
@@ -48,7 +39,6 @@ void draw() {
   } else if (gameState == 3) {
     drawCredits();
   }
-  P1.update;
 }
 
 void drawMMenu() {
@@ -61,9 +51,8 @@ void drawMMenu() {
 void drawPlay() {
   background(#3A61D3);
   P1.display();
-  
-  // 3. Render the obstacle containing the bird PNG on the play screen
-  obs1.display(); 
+
+
 }
 
 void drawCredits () {
@@ -82,20 +71,23 @@ void keyPressed() {
   }
   
   if (gameState == 0) {
-    if (key == CODED) {
-      if (keyCode == DOWN) {
-        selectedIndex = (selectedIndex + 1) % buttons.length;
-        updateMSelect();
-      } else if (keyCode == UP) {
-        selectedIndex = (selectedIndex - 1 + buttons.length) % buttons.length;
-        updateMSelect();
-      }
+    if ((key == CODED && keyCode == DOWN) || key == 's' || key == 'S') {
+      selectedIndex = (selectedIndex + 1) % buttons.length;
+      updateMSelect();
     }
+    
+    else if ((key == CODED && keyCode == UP) || key == 'w' || key == 'W') {
+      selectedIndex = (selectedIndex - 1 + buttons.length) % buttons.length;
+      updateMSelect();
+    }
+    
     if (keyCode == ENTER || key == ' ') {
       if (selectedIndex == 0) {
         gameState = 2;
       } else if (selectedIndex == 1) {
         gameState = 3;
+      } else if (selectedIndex == 2) {
+        exit();
       }
     }
   }
