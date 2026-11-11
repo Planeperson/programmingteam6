@@ -1,18 +1,17 @@
 // Osha Furness
-
 MMenuButton Plb;
 MMenuButton Crb;
 MMenuButton Qub;
 Player P1;
+Obstacles obs1;
 
 MMenuButton[] buttons;
 int selectedIndex = 0;
-
 int gameState = 0;
-
+PImage birdImg;
 void setup() {
   size(1500, 750);
-
+  birdImg = loadImage("birb2.png");
 
   Plb = new MMenuButton(width/2, height/2);
   Crb = new MMenuButton(width/2, height/2 + 100);
@@ -20,15 +19,15 @@ void setup() {
   P1 = new Player();
 
 
+  obs1 = new Obstacles(birdImg);
+
   buttons = new MMenuButton[] {
     Plb,
     Crb,
     Qub,
   };
-
   updateMSelect();
 }
-
 void draw() {
   background(#D3F8FF);
 
@@ -39,9 +38,11 @@ void draw() {
   } else if (gameState == 3) {
     drawCredits();
   }
-  P1.update();
+  if (gameState == 2) {
+    P1.update();
+    obs1.update();
+  }
 }
-
 void drawMMenu() {
   background(#D3F8FF);
   Plb.display();
@@ -54,6 +55,7 @@ void drawPlay() {
   P1.display();
 
 
+  obs1.display();
 }
 
 void drawCredits () {
@@ -70,18 +72,15 @@ void keyPressed() {
     gameState = 0;
     return;
   }
-  
+
   if (gameState == 0) {
     if ((key == CODED && keyCode == DOWN) || key == 's' || key == 'S') {
       selectedIndex = (selectedIndex + 1) % buttons.length;
       updateMSelect();
-    }
-    
-    else if ((key == CODED && keyCode == UP) || key == 'w' || key == 'W') {
+    } else if ((key == CODED && keyCode == UP) || key == 'w' || key == 'W') {
       selectedIndex = (selectedIndex - 1 + buttons.length) % buttons.length;
       updateMSelect();
     }
-    
     if (keyCode == ENTER || key == ' ') {
       if (selectedIndex == 0) {
         gameState = 2;
@@ -89,22 +88,23 @@ void keyPressed() {
         gameState = 3;
       } else if (selectedIndex == 2) {
         exit();
-      } 
+      }
     }
-    
   }
-  setPlayerKey(true);
+  if (gameState == 2) {
+    setPlayerKey(true);
+  }
 }
-
 void updateMSelect() {
   for (int i = 0; i < buttons.length; i++) {
     buttons[i].selected = (i == selectedIndex);
   }
 }
 void keyReleased() {
-  setPlayerKey(false);
+  if (gameState == 2) {
+    setPlayerKey(false);
+  }
 }
-
 void setPlayerKey(boolean pressed) {
   if (key == CODED) {
     P1.setMove(keyCode, pressed);
