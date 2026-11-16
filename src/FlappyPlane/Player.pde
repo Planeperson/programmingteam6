@@ -5,7 +5,7 @@ class Player {
   color c1;
   PImage p1;
 
- 
+  // Key tracking flags
   boolean isUp, isDown, isLeft, isRight;
 
   // Constructor
@@ -23,7 +23,7 @@ class Player {
     image(p1, x, y);
   }
 
-
+ 
   void update() {
     int speed = 5;
     if (isUp)    y -= speed;
@@ -38,5 +38,19 @@ class Player {
     if (k == DOWN || k == 's' || k == 'S')  isDown = b;
     if (k == LEFT || k == 'a' || k == 'A')  isLeft = b;
     if (k == RIGHT || k == 'd' || k == 'D') isRight = b;
+    if (y > height){
+      y = 0;
+    } else if (y<0){
+      y = height;
+    }
+    if (x > width){
+      x = 0;
+    } else if (x < 0){
+      x = width;
+    }
   }
+ 
+    
+    
+  
 }
