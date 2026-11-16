@@ -6,7 +6,7 @@ Player P1;
 
 
 Obstacles[] birds;
-int numBirds = 5; 
+int numBirds = 5;
 
 MMenuButton[] buttons;
 int selectedIndex = 0;
@@ -22,7 +22,7 @@ void setup() {
   Qub = new MMenuButton(width/2, height/2 + 200);
   P1 = new Player();
 
- 
+
   birds = new Obstacles[numBirds];
   for (int i = 0; i < birds.length; i++) {
     birds[i] = new Obstacles(birdImg);
@@ -46,12 +46,35 @@ void draw() {
   } else if (gameState == 3) {
     drawCredits();
   }
-  
+
   if (gameState == 2) {
     P1.update();
     for (int i = 0; i < birds.length; i++) {
       birds[i].update();
+
+      if (P1.x + P1.w > birds[i].x &&
+        P1.x < birds[i].x + birds[i].w &&
+        P1.y + P1.h > birds[i].y &&
+        P1.y < birds[i].y + birds[i].h) {
+
+        gameState = 0;
+        resetGame();
+        break;
+      }
     }
+  }
+}
+
+void resetGame() {
+  P1.x = 100;
+  P1.y = height / 2;
+  P1.isUp = false;
+  P1.isDown = false;
+  P1.isLeft = false;
+  P1.isRight = false;
+
+  for (int i = 0; i < birds.length; i++) {
+    birds[i].resetObstacle();
   }
 }
 
