@@ -12,8 +12,8 @@ class Player {
   Player() {
     x = 100;
     y = height / 2;
-    w = 50;
-    h = 50;
+    w = 180;
+    h = 100;
     c1 = color(111);
     p1 = loadImage("123.png");
   }
